@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop</title>
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--google font import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!--css link-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--상단 메뉴-->
+    <div class="top-menu">
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">주문확인</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+    </div>
+    <!--헤더-->
+    <header>
+
+        <div class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="logo">
+            <a href="#">MYBEAN</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SUBSCRIPTION</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">WHOLESALE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+
+        </div>
+
+    </header>
+    <div class="overlay"></div>
+    <nav class="mobile-nav">
+        <div class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <a href="#">SHOP</a>
+        <a href="#">SUBSCRIPTION</a>
+        <a href="#">LIBRARY</a>
+        <a href="#">WHOLESALE</a>
+        <a href="#">ABOUT</a>
+    </nav>
+    <section class="hero">
+        <img class="hero-image" src="" alt="Coffee Banner">
+        <div class="hero-overlay"></div>
+        <button class="slider-btn prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="hero-content">
+            <div class="hero-badge"></div>
+
+            <h1 class="hero-title"></h1>
+
+            <p class="hero-description"></p>
+            <a href="#" class="hero-btn">
+                바로가기
+            </a>
+        </div>
+        <div class="hero-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <!-- 상품 섹션 -->
+    <section class="product-section">
+
+        <!-- Recommendation -->
+        <div class="product-container">
+
+            <h2 class="section-title">RECOMMENDATION</h2>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2019/01/02/04/23/food-3908007_1280.jpg" alt="드립백 세트">
+                        <span class="product-badge">2+1</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            아메리카노
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2021/05/24/06/22/vietnam-drip-6277907_1280.jpg"
+                            alt="파나마 게이샤">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            카페라떼
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2025/09/05/15/14/coffee-9817661_1280.jpg"
+                            alt="피지 서머 드립백 세트">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            카푸치노
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2019/11/03/15/08/dessert-4598937_1280.jpg"
+                            alt="싱글오리진 파우더 커피">
+                    </div>
+
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Best -->
+        <div class="product-container">
+
+            <h2 class="section-title">BEST</h2>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2019/01/02/04/23/food-3908007_1280.jpg" alt="드립백 세트">
+                        <span class="product-badge">2+1</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            아메리카노
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2021/05/24/06/22/vietnam-drip-6277907_1280.jpg"
+                            alt="파나마 게이샤">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            카페라떼
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2025/09/05/15/14/coffee-9817661_1280.jpg"
+                            alt="피지 서머 드립백 세트">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+                            카푸치노
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://cdn.pixabay.com/photo/2019/11/03/15/08/dessert-4598937_1280.jpg"
+                            alt="싱글오리진 파우더 커피">
+                    </div>
+
+
+                    <div class="product-info">
+                        <h3>Coffee</h3>
+                        <p class="product-name">
+
+                        </p>
+
+                        <p class="product-description">
+                            원두커피
+                        </p>
+
+                        <p class="product-date">
+                            로스팅 2026.07.25
+                        </p>
+
+                        <p class="product-price">
+                            24,000원
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Subscription Section -->
+    <h2 class="section-title">SUBSCRIPTION</h2>
+    <section class="subscription-section">
+        <div class="subscription-content">
+
+            <div class="subscription-title">
+                <h2>
+                    매일 특별한<br>
+                    커피를 만나보세요
+                </h2>
+            </div>
+
+            <div class="subscription-card">
+
+                <img src="https://cdn.pixabay.com/photo/2019/10/17/04/42/jam-4555987_1280.jpg" alt="커피 정기구독"
+                    class="subscription-image">
+
+                <div class="subscription-info">
+
+                    <span class="subscription-category">
+                        문 앞까지 갖다드림
+                    </span>
+
+                    <h3>
+                        정기구독 시작하기
+                    </h3>
+
+                    <p>
+                        MYBEAN을 집 앞에서<br>
+                        더 편리하게 만나보세요
+                    </p>
+
+                    <a href="#" class="subscription-btn">
+                        <span>시작하기</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section">
+
+        <div class="about-overlay"></div>
+
+        <div class="about-content">
+
+            <h2>
+                특별함을 모두에게
+            </h2>
+
+            <p>
+                MYBEAN은 커피를 즐기는 사람은 물론 <br>
+                모든 이가 함께 행복해지는 가치를 지향합니다
+            </p>
+
+            <a href="#" class="about-link">
+                Visit Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <!-- SNS -->
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+                <span>mybean</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+                <span>MYBEAN</span>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-kakao-talk"></i>
+                <span>MYBEAN</span>
+            </a>
+
+        </div>
+
+
+        <!-- Footer Navigation -->
+        <div class="footer-nav">
+
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">고객센터</a>
+            <a href="#">매장소개</a>
+            <a href="#">회원등급별혜택</a>
+
+        </div>
+
+
+        <!-- Footer Information -->
+        <div class="footer-info">
+
+            <!-- 회사 정보 -->
+            <div class="company-info">
+
+                <p>
+                    상호: MYBEAN 대표이사: 홍길동
+                    주소: 서울특별시 ○○구 ○○로 25
+                </p>
+
+                <p>
+                    사업자등록번호: 000-00-00000
+                    <a href="#">사업자정보확인</a>
+                    개인정보보호책임자: 홍길동
+                </p>
+
+                <p>
+                    이메일: hello@mybean.com
+                    고객센터: 0000-0000
+                </p>
+
+                <p>
+                    ©2026 MYBEAN COFFEE. ALL RIGHT RESERVED.
+                </p>
+
+
+                <!-- SNS -->
+                <div class="footer-bottom-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>mybean</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>MYBEAN</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-kakao-talk"></i>
+                        <span>MYBEAN</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 고객센터 -->
+            <div class="customer-center">
+
+                <h3>고객센터 운영시간</h3>
+
+                <p>
+                    평일 09:00~18:00
+                    &nbsp;&nbsp;&nbsp;
+                    점심 12:00~13:00
+                </p>
+
+                <p>
+                    휴무 토/일/공휴일
+                </p>
+
+            </div>
+
+
+            <!-- 앱 다운로드 -->
+            <div class="app-download">
+
+                <h3>APP 다운</h3>
+
+                <div class="qr-container">
+
+                    <div class="qr-item">
+
+                        <img src="images/001.png" alt="안드로이드 앱 다운로드 QR코드">
+
+                        <span>안드로이드</span>
+
+                    </div>
+
+
+                    <div class="qr-item">
+
+                        <img src="images/001.png" alt="iOS 앱 다운로드 QR코드">
+
+                        <span>iOS</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 관리
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        const closeBtn = document.querySelector(".close-btn");
+        const mobileNav = document.querySelector(".mobile-nav");
+        const overlay = document.querySelector(".overlay");
+
+        menuBtn.addEventListener("click", () => {
+            mobileNav.classList.add("active");
+            overlay.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+
+        // =========================
+        // Hero Slider
+        // =========================
+
+        const slides = [
+            {
+                image: "https://images.unsplash.com/photo-1645926680403-d3a4a7d75f60?q=80&w=2789&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                badge: "Bean Forest",
+                title: "Costa Rica Chirripó Ricardo<br>Catuai Honey",
+                description: `
+            농익은 과일의 풍미, 깊게 남는 단맛<br>
+            코스타리카 치리포 리카르도 카투아이 허니
+        `
+            },
+
+            {
+                image: "https://images.unsplash.com/photo-1626971847424-86ebadbd254a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                badge: "Single Origin",
+                title: "Ethiopia Guji Natural",
+                description: `
+            블루베리와 꽃향이 특징인<br>
+            에티오피아 구지 내추럴
+        `
+            },
+
+            {
+                image: "https://images.unsplash.com/photo-1613336028453-d49549a23e82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                badge: "Monthly Pick",
+                title: "Kenya AA Washed",
+                description: `
+            자몽의 산미와 풍부한 바디감<br>
+            케냐 AA 워시드
+        `
+            }
+        ];
+
+        let currentSlide = 0;
+
+        const heroImage = document.querySelector(".hero-image");
+        const heroBadge = document.querySelector(".hero-badge");
+        const heroTitle = document.querySelector(".hero-title");
+        const heroDescription = document.querySelector(".hero-description");
+
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+
+        const dots = document.querySelectorAll(".dot");
+
+        function renderSlide(index) {
+
+            const slide = slides[index];
+
+            heroImage.src = slide.image;
+            heroBadge.innerHTML = slide.badge;
+            heroTitle.innerHTML = slide.title;
+            heroDescription.innerHTML = slide.description;
+
+            dots.forEach(dot => {
+                dot.classList.remove("active");
+            });
+
+            dots[index].classList.add("active");
+        }
+
+        renderSlide(currentSlide);
+
+
+        // 다음 슬라이드
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            renderSlide(currentSlide);
+        }
+
+        // 이전 슬라이드
+        function prevSlide() {
+            currentSlide =
+                (currentSlide - 1 + slides.length) % slides.length;
+
+            renderSlide(currentSlide);
+        }
+
+
+        // 화살표 버튼
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+
+        // Dot 클릭
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                currentSlide = index;
+                renderSlide(currentSlide);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
