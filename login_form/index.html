@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MYBEAN Login</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Roboto",sans-serif;
+}
+
+body{
+
+    background:#f5f5f5;
+}
+
+
+/* Overlay */
+
+.login-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+/* Modal */
+
+.login-modal{
+
+    width:420px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    position:relative;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.15);
+
+}
+
+
+/* Close */
+
+.close{
+
+    position:absolute;
+
+    top:20px;
+    right:22px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    color:#999;
+}
+
+
+/* Logo */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    color:#6F4E37;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+    margin-bottom:40px;
+
+}
+
+
+/* Input */
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:18px;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    height:54px;
+
+    padding:0 48px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.input-group input:focus{
+
+    border-color:#6F4E37;
+
+}
+
+
+.input-group i{
+
+    position:absolute;
+
+    top:50%;
+
+    left:18px;
+
+    transform:translateY(-50%);
+
+    color:#999;
+
+}
+
+.eye{
+
+    position:absolute;
+
+    right:18px;
+
+    left:auto;
+
+    cursor:pointer;
+
+}
+
+
+/* Remember */
+
+.option{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:20px 0 30px;
+
+    font-size:14px;
+
+    color:#666;
+
+}
+
+.option label{
+
+    display:flex;
+
+    gap:8px;
+
+    cursor:pointer;
+
+}
+
+.option a{
+
+    text-decoration:none;
+
+    color:#6F4E37;
+
+}
+
+
+/* Button */
+
+.login-btn{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#6F4E37;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#4d3526;
+
+}
+
+
+/* Divider */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:35px 0;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.divider span{
+
+    padding:0 15px;
+
+}
+
+
+/* SNS */
+
+.sns{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+}
+
+.sns a{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#f7f7f7;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.3s;
+
+}
+
+.sns a:hover{
+
+    transform:translateY(-3px);
+
+    background:#6F4E37;
+
+    color:white;
+
+}
+
+
+/* Join */
+
+.join{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+.join a{
+
+    color:#6F4E37;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+
+/* Responsive */
+
+@media(max-width:500px){
+
+.login-modal{
+
+    width:92%;
+
+    padding:35px 25px;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-overlay">
+
+<div class="login-modal">
+
+<div class="close">
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<div class="logo">
+MYBEAN
+</div>
+
+<p class="subtitle">
+Premium Specialty Coffee
+</p>
+
+<div class="input-group">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+placeholder="아이디">
+
+</div>
+
+<div class="input-group">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+placeholder="비밀번호">
+
+<i class="fa-regular fa-eye eye"></i>
+
+</div>
+
+<div class="option">
+
+<label>
+
+<input type="checkbox">
+
+로그인 유지
+
+</label>
+
+<a href="#">
+비밀번호 찾기
+</a>
+
+</div>
+
+<button class="login-btn">
+로그인
+</button>
+
+<div class="divider">
+<span>또는</span>
+</div>
+
+<div class="sns">
+
+<a href="#">
+<i class="fa-brands fa-google"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-kickstarter-k"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-apple"></i>
+</a>
+
+</div>
+
+<div class="join">
+
+회원이 아니신가요?
+
+<a href="#">
+회원가입
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
