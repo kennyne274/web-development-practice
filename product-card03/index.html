@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>커피 메뉴 카드</title>
+
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+  <div class="card-container">
+
+    <!-- 카드 1 -->
+    <div class="coffee-card">
+      <span class="badge">BEST</span>
+      <div class="heart-btn">
+        <i class="fa-regular fa-heart"></i>
+      </div>
+      <img class="card-img" src="https://cdn.pixabay.com/photo/2024/04/29/23/35/drink-8729032_1280.jpg" alt="아메리카노">
+      
+      <div class="card-content">
+        <h3 class="coffee-name">아이스 아메리카노</h3>
+        <p class="coffee-desc">깊고 진한 에스프레소에 시원한 얼음을 더한 클래식</p>
+        
+        <div class="price-row">
+          <div class="price">
+            4,500원 <del>5,000원</del>
+          </div>
+          <button class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 카드 2 -->
+    <div class="coffee-card">
+      <span class="badge">NEW</span>
+      <div class="heart-btn">
+        <i class="fa-regular fa-heart"></i>
+      </div>
+      <img class="card-img" src="https://cdn.pixabay.com/photo/2026/07/18/11/48/11-48-07-959_1280.jpg" alt="카페라떼">
+      
+      <div class="card-content">
+        <h3 class="coffee-name">바닐라 카페라떼</h3>
+        <p class="coffee-desc">부드러운 우유와 달콤한 바닐라 시럽의 조화</p>
+        
+        <div class="price-row">
+          <div class="price">
+            5,800원
+          </div>
+          <button class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 카드 3 -->
+    <div class="coffee-card">
+      <div class="heart-btn">
+        <i class="fa-regular fa-heart"></i>
+      </div>
+      <img class="card-img" src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="콜드브루">
+      
+      <div class="card-content">
+        <h3 class="coffee-name">콜드브루</h3>
+        <p class="coffee-desc">12시간 저온 추출로 만든 깔끔하고 부드러운 맛</p>
+        
+        <div class="price-row">
+          <div class="price">
+            5,200원
+          </div>
+          <button class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 카드 4 -->
+    <div class="coffee-card">
+      <div class="heart-btn">
+        <i class="fa-regular fa-heart"></i>
+      </div>
+      <img class="card-img" src="https://cdn.pixabay.com/photo/2015/07/13/14/58/coffee-843278_1280.jpg" alt="콜드브루">
+      
+      <div class="card-content">
+        <h3 class="coffee-name">아메리카노</h3>
+        <p class="coffee-desc">깊고 깔끔하며 부드러운 맛</p>
+        
+        <div class="price-row">
+          <div class="price">
+            5,200원
+          </div>
+          <button class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // 하트 클릭 시 색상 변경
+    document.querySelectorAll('.heart-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (this.classList.contains('active')) {
+          icon.classList.replace('fa-regular', 'fa-solid');
+        } else {
+          icon.classList.replace('fa-solid', 'fa-regular');
+        }
+      });
+    });
+  </script>
+
+  </body>
+</html>
