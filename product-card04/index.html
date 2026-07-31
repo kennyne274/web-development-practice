@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 제목 영역 */
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .section-header h1 span {
+      color: #f5a623;
+    }
+
+    .section-header p {
+      margin-top: 8px;
+      color: #888;
+      font-size: 15px;
+    }
+
+    /* 카드 그리드 */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      border: 1.5px solid #f5d9a8;
+      border-radius: 16px;
+      padding: 20px 16px 24px;
+      text-align: center;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .menu-card:hover {
+      box-shadow: 0 12px 24px rgba(245, 166, 35, 0.15);
+    }
+
+    .menu-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin-bottom: 18px;
+  
+    }
+
+    .menu-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      margin-bottom: 16px;
+    }
+
+    .price .current {
+      color: #e74c3c;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .price .original {
+      color: #aaa;
+      font-size: 14px;
+      text-decoration: line-through;
+      margin-left: 6px;
+    }
+
+    .order-btn {
+      display: inline-block;
+      background: #f5a623;
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: red;
+      transform: scale(1.05);
+    }
+
+    /* 반응형 */
+    @media (max-width: 1024px) {
+      .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .menu-card {
+    padding: 12px 10px 16px;
+  }
+
+  .menu-card img {
+    height: 110px;
+  }
+
+  .menu-card h3 {
+    font-size: 13px;
+  }
+
+  .price .current {
+    font-size: 15px;
+  }
+
+  .price .original {
+    font-size: 11px;
+  }
+
+  .order-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="section-header">
+      <h1>Our <span>Best Menu</span> <i class="fa-solid fa-burger"></i></h1>
+      <p>Top Picks from Our Customers..</p>
+    </div>
+
+    <div class="menu-grid">
+
+      <!-- 카드 1 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format" alt="피자 세트">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&auto=format" alt="치즈버거">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&auto=format" alt="더블버거">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 4 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&auto=format" alt="스마일 버거">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 5 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&auto=format" alt="치킨버거">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 6 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&auto=format" alt="피자">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 7 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&auto=format" alt="클래식 버거">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 8 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&auto=format" alt="콜라 세트">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 9 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&auto=format" alt="랩">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 10 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400&auto=format" alt="감자튀김">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 11 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&auto=format" alt="피자 + 콜라">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+      <!-- 카드 12 -->
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&auto=format" alt="스마일 샌드위치">
+        <h3>Product Name Here</h3>
+        <div class="price">
+          <span class="current">$19.99</span>
+          <span class="original">$10.99</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
